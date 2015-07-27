@@ -18,29 +18,29 @@
       <SourceCodeLineCount>105</SourceCodeLineCount>
       <EmptyLinesCount>15</EmptyLinesCount>
     </File>
-    <File Name="\CodeHighligherSandcastleComponent\CodeBlockPostTransformComponent.cs">
-      <SingleLineCommentsCount>19</SingleLineCommentsCount>
+     <File Name="\CodeHighligherSandcastleComponent\CodeBlockComponent.cs">
+      <SingleLineCommentsCount>27</SingleLineCommentsCount>
       <MultiLineCommentsCount>0</MultiLineCommentsCount>
-      <TotalCommentsCount>19</TotalCommentsCount>
-      <TotalLinesCount>122</TotalLinesCount>
-      <SourceCodeLineCount>93</SourceCodeLineCount>
-      <EmptyLinesCount>10</EmptyLinesCount>
+      <TotalCommentsCount>27</TotalCommentsCount>
+      <TotalLinesCount>147</TotalLinesCount>
+      <SourceCodeLineCount>105</SourceCodeLineCount>
+      <EmptyLinesCount>15</EmptyLinesCount>
     </File>
-    <File Name="\CodeHighligherSandcastleComponent\Parsers\CSharpDynamicSyntaxLanguage.cs">
-      <SingleLineCommentsCount>35</SingleLineCommentsCount>
-      <MultiLineCommentsCount>1</MultiLineCommentsCount>
-      <TotalCommentsCount>36</TotalCommentsCount>
-      <TotalLinesCount>119</TotalLinesCount>
-      <SourceCodeLineCount>76</SourceCodeLineCount>
-      <EmptyLinesCount>7</EmptyLinesCount>
-    </File>
-    <File Name="\CodeHighligherSandcastleComponent\Properties\Resources.Designer.cs">
-      <SingleLineCommentsCount>25</SingleLineCommentsCount>
+    <File Name="\CodeHighligherSandcastleComponent\CodeBlockComponent.cs">
+      <SingleLineCommentsCount>27</SingleLineCommentsCount>
       <MultiLineCommentsCount>0</MultiLineCommentsCount>
-      <TotalCommentsCount>25</TotalCommentsCount>
-      <TotalLinesCount>79</TotalLinesCount>
-      <SourceCodeLineCount>46</SourceCodeLineCount>
-      <EmptyLinesCount>8</EmptyLinesCount>
+      <TotalCommentsCount>27</TotalCommentsCount>
+      <TotalLinesCount>147</TotalLinesCount>
+      <SourceCodeLineCount>105</SourceCodeLineCount>
+      <EmptyLinesCount>15</EmptyLinesCount>
+    </File>
+     <File Name="\CodeHighligherSandcastleComponent\CodeBlockComponent.cs">
+      <SingleLineCommentsCount>27</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>27</TotalCommentsCount>
+      <TotalLinesCount>147</TotalLinesCount>
+      <SourceCodeLineCount>105</SourceCodeLineCount>
+      <EmptyLinesCount>15</EmptyLinesCount>
     </File>
     <File Name="\MSBuildExtendedTasks\Net\MakeHttpRequest.cs">
       <SingleLineCommentsCount>155</SingleLineCommentsCount>
