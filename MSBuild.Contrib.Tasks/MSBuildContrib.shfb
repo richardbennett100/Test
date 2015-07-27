@@ -1,0 +1,50 @@
+﻿<project schemaVersion="1.6.0.2">
+    <assemblies>
+        <assembly assemblyPath=".\bin\Release\MSBuildContrib.Tasks.dll" xmlCommentsPath=".\bin\Release\MSBuildContrib.Tasks.XML" commentsOnly="False" />
+        <assembly assemblyPath=".\bin\Release\MSBuildContrib.Utilities.dll" xmlCommentsPath=".\bin\Release\MSBuildContrib.Utilities.XML" commentsOnly="False" />
+    </assemblies>
+    <namespaceSummaries>
+        <namespaceSummaryItem name="" isDocumented="False" />
+        <namespaceSummaryItem name="MSBuildContrib.Tasks" isDocumented="True">Common tasks.</namespaceSummaryItem>
+        <namespaceSummaryItem name="MSBuildContrib.Tasks.Properties" isDocumented="True" />
+        <namespaceSummaryItem name="MSBuildContrib.Utilities" isDocumented="True">Shared utilities and helpers.</namespaceSummaryItem>
+        <namespaceSummaryItem name="MSBuildContrib.Utilities.Properties" isDocumented="True" />
+    </namespaceSummaries>
+    <ProjectSummary />
+    <MissingTags>Summary, Parameter, Returns, AutoDocumentCtors, Namespace</MissingTags>
+    <VisibleItems>InheritedMembers, InheritedFrameworkMembers, Protected, SealedProtected</VisibleItems>
+    <HtmlHelp1xCompilerPath path="" />
+    <HtmlHelp2xCompilerPath path="" />
+    <OutputPath>.\docs\</OutputPath>
+    <SandcastlePath path="" />
+    <WorkingPath path="" />
+    <CleanIntermediates>True</CleanIntermediates>
+    <KeepLogFile>True</KeepLogFile>
+    <HelpFileFormat>HtmlHelp1x</HelpFileFormat>
+    <PurgeDuplicateTopics>True</PurgeDuplicateTopics>
+    <CppCommentsFixup>False</CppCommentsFixup>
+    <FrameworkVersion>3.5</FrameworkVersion>
+    <BinaryTOC>True</BinaryTOC>
+    <IncludeFavorites>False</IncludeFavorites>
+    <Preliminary>False</Preliminary>
+    <RootNamespaceContainer>False</RootNamespaceContainer>
+    <RootNamespaceTitle />
+    <HelpTitle>MSBuildContrib Tasks</HelpTitle>
+    <HtmlHelpName>MSBuildContrib.Tasks</HtmlHelpName>
+    <Language>en-US</Language>
+    <CopyrightHref />
+    <CopyrightText>Copyright (c) 2007-2008 Scott Dorman</CopyrightText>
+    <FeedbackEMailAddress>sj_dorman@hotmail.com</FeedbackEMailAddress>
+    <HeaderText />
+    <FooterText />
+    <ProjectLinkType>Local</ProjectLinkType>
+    <SdkLinkType>Msdn</SdkLinkType>
+    <SdkLinkTarget>Blank</SdkLinkTarget>
+    <PresentationStyle>vs2005</PresentationStyle>
+    <NamingMethod>Guid</NamingMethod>
+    <SyntaxFilters>Standard</SyntaxFilters>
+    <ShowFeedbackControl>True</ShowFeedbackControl>
+    <ContentPlacement>AboveNamespaces</ContentPlacement>
+    <ContentSiteMap path="" />
+    <TopicFileTransform path="" />
+</project>

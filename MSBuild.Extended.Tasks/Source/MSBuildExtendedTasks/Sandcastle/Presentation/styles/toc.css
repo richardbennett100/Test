@@ -1,0 +1,67 @@
+body {
+  color:Black;
+  margin:0px;
+  white-space:nowrap !important;
+}
+
+div.toc {
+  margin: 0px;
+  position:relative;
+  top:0px;
+  left:0px;
+  white-space:nowrap;
+  width:100%;
+}
+
+.toc div.folder {
+  position:relative;
+  padding-left:15px !important;
+  width:100%;
+}
+
+.toc span.label {
+  width:100%;
+  display:block;
+  cursor:pointer; 
+  background-color:transparent;
+}
+
+.toc div.folder .label {
+  position:relative;
+  background-image: url(../icons/folder.gif);
+  background-position: left center;
+  white-space:nowrap;
+  background-repeat:no-repeat;
+  padding-left:25px !important;
+}
+
+.toc div.folder .labelOpen {
+  padding-left:25px !important;
+  position:relative;
+  background-image: url(../icons/folderOpen.gif);
+  background-position: left center;
+  background-repeat:no-repeat;
+}
+
+.toc div.document {
+  position:relative;
+  padding-left:15px !important;
+}
+
+.toc div.document .label {
+  position:relative;
+  background-image: url(../icons/document.gif);
+  background-position: left center;
+  background-repeat:no-repeat;
+  padding-left: 25px !important;
+}
+
+.toc a {
+  color: black;
+  text-decoration:none;
+}
+
+.toc a:hover {
+  color: blue;
+  text-decoration:none;
+}

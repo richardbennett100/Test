@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--	
+	$Id: GetSolutionProjectsTest.proj 321 2007-04-30 04:52:48Z joshuaflanagan $
+	Copyright © 2006 Andy Johns
+	MSBuild file to test GetSolutionProjects task
+-->
+
+<Project DefaultTargets="Test" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <MSBuildCommunityTasksPath Condition="'$(MSBuildCommunityTasksPath)' == ''">$(MSBuildExtensionsPath)/MSBuildCommunityTasks</MSBuildCommunityTasksPath>
+  </PropertyGroup>
+
+  <Import Project="$(MSBuildCommunityTasksPath)/MSBuild.Community.Tasks.Targets" />
+
+  <PropertyGroup>
+    <TargetSolution>TestSolution.sln</TargetSolution>
+  </PropertyGroup>
+  <Target Name="Test">
+      <GetSolutionProjects Solution="$(TargetSolution)">
+          <Output ItemName="ProjectFiles" TaskParameter="Output"/>
+      </GetSolutionProjects>
+
+    <Message Text="Solution Project paths:" />
+    <Message Text="%(ProjectFiles.ProjectName) : @(ProjectFiles) %(ProjectFiles.ProjectGUID)" />
+
+  </Target>
+</Project>

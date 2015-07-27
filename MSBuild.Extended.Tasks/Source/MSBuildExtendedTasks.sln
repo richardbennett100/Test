@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BA792214-A857-48EC-B10C-DC1DD065BDAA}"
+	ProjectSection(SolutionItems) = preProject
+		MSBuildExtendedTasks\License.txt = MSBuildExtendedTasks\License.txt
+		MSBuildExtendedTasksFull.msbuild = MSBuildExtendedTasksFull.msbuild
+		Todo.txt = Todo.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuildExtendedTasks", "MSBuildExtendedTasks\MSBuildExtendedTasks.csproj", "{01AAED2E-FDBE-4E56-8E30-6E4733F21F1F}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "MSBuildExtendedTasksInstaller", "MSBuildExtendedTasksInstaller\MSBuildExtendedTasksInstaller.wixproj", "{98A6FDE0-4BAA-4E94-ADA8-699995406E3E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeHighligherSandcastleComponent", "CodeHighligherSandcastleComponent\CodeHighligherSandcastleComponent.csproj", "{06B0826B-996C-460B-9418-C84B7312FCBB}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://bappl09:8080/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = CodeHighligherSandcastleComponent\\CodeHighligherSandcastleComponent.csproj
+		SccProjectName1 = CodeHighligherSandcastleComponent
+		SccLocalPath1 = CodeHighligherSandcastleComponent
+		SccProjectUniqueName2 = MSBuildExtendedTasks\\MSBuildExtendedTasks.csproj
+		SccProjectName2 = MSBuildExtendedTasks
+		SccLocalPath2 = MSBuildExtendedTasks
+		SccProjectUniqueName3 = MSBuildExtendedTasksInstaller\\MSBuildExtendedTasksInstaller.wixproj
+		SccProjectName3 = MSBuildExtendedTasksInstaller
+		SccLocalPath3 = MSBuildExtendedTasksInstaller
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01AAED2E-FDBE-4E56-8E30-6E4733F21F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AAED2E-FDBE-4E56-8E30-6E4733F21F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AAED2E-FDBE-4E56-8E30-6E4733F21F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AAED2E-FDBE-4E56-8E30-6E4733F21F1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98A6FDE0-4BAA-4E94-ADA8-699995406E3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98A6FDE0-4BAA-4E94-ADA8-699995406E3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98A6FDE0-4BAA-4E94-ADA8-699995406E3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06B0826B-996C-460B-9418-C84B7312FCBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06B0826B-996C-460B-9418-C84B7312FCBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06B0826B-996C-460B-9418-C84B7312FCBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06B0826B-996C-460B-9418-C84B7312FCBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
