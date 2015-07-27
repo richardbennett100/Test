@@ -13,11 +13,5 @@
         </MSBuild.ExtensionPack.BizTalk.BizTalkSendHandler>
         <Message Text="BizTalkSendHandler  Exists: $(DoesExist) "/>
         <!-- Delete a SendHandler -->
-        <MSBuild.ExtensionPack.BizTalk.BizTalkSendHandler TaskAction="Delete" HostName="MSBEPTESTHOST" AdapterName="MQSeries"/>
-        <!-- Check a SendHandler exists (it shouldn't) -->
-        <MSBuild.ExtensionPack.BizTalk.BizTalkSendHandler TaskAction="CheckExists" HostName="MSBEPTESTHOST" AdapterName="MQSeries">
-            <Output TaskParameter="Exists" PropertyName="DoesExist"/>
-        </MSBuild.ExtensionPack.BizTalk.BizTalkSendHandler>
-        <Message Text="BizTalkSendHandler  Exists: $(DoesExist) "/>
     </Target>
 </Project>
