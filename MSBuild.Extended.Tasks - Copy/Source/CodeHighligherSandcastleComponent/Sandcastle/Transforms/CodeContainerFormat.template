@@ -1,0 +1,14 @@
+﻿<span id="span${0}" class="codeExHostSpan">
+  <div id="container${0}" class="codeContainer">
+    <div class="codeTitle" id="title${0}">
+      <span class="copyIconLabel" onclick="CopyCodeToClipboard('${0}',{4});">
+        <img src="../icons/copycode.gif" alt="Copy Code" title="Copy Code" />
+      </span>
+      <span class="languageLabel">{1}</span>
+    </div>
+    <div class="codeEx" id="${0}">
+      <pre xml:space="preserve">{2}</pre>
+    </div>
+  </div>
+  <pre style="display:none;" id="plainCode${0}" xml:space="preserve">{3}</pre>
+</span>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * Copyright (c) 2007, Ryan Conrad. All rights reserved.
+ * 
+ * Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ * - Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+ * 
+ * - Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the 
+ *    documentation and/or other materials provided with the distribution.
+ * 
+ * - Neither the name of the Camalot Designs nor the names of its contributors may be used to endorse or promote products derived from this software 
+ *    without specific prior written permission.
+ * 
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE 
+ * GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT 
+ * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH 
+ * DAMAGE.
+ *
+-->
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build" InitialTargets="PrepareBuild">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <ProductVersion>3.0</ProductVersion>
+    <ProjectGuid>{98a6fde0-4baa-4e94-ada8-699995406e3e}</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>$(CCNetProject)$(CCNetLabel)</OutputName>
+    <OutputType>Package</OutputType>
+    <Cultures>en-US</Cultures>
+    <WixToolPath Condition=" '$(WixToolPath)' == '' ">C:\Program Files\Windows Installer XML v3\bin\</WixToolPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>$(Configuration);RootNamespace=MSBuild.Extended.Tasks;CCNetProject=$(CCNetProject);CCNetLabel=$(CCNetLabel);OutputPath=$(OutputPath)</DefineConstants>
+    <ExcludePdb Condition=" '$(Configuration)' != 'Debug' ">**\*.pdb</ExcludePdb>
+  </PropertyGroup>
+
+
+  <PropertyGroup Condition="'$(CCNetLabel)' != ''">
+    <WixFile>$(MSBuildProjectDirectory)\files.wxs</WixFile>
+    <ComponentGuid><![CDATA[{04E016C1-6985-445C-A8E9-6B82B82C4B9B}]]></ComponentGuid>
+    <BaseXPath><![CDATA[//wix:Component[@Guid='$(ComponentGuid)']]]></BaseXPath>
+    <Namespace>http://schemas.microsoft.com/wix/2006/wi</Namespace>
+    <NamespaceManager>wix:$(Namespace)</NamespaceManager>
+    <ChmComponentGuid>{3AB5C023-D364-47AC-988D-CCD03A6706CB}</ChmComponentGuid>
+    <ChmBaseXPath><![CDATA[//wix:Component[@Guid='$(ChmComponentGuid)']]]></ChmBaseXPath>
+    <IconsComponentGuid>{50c42423-00ac-4a95-b4db-7caf267521f4}</IconsComponentGuid>
+    <IconsBaseXPath><![CDATA[//wix:Component[@Guid='$(IconsComponentGuid)']]]></IconsBaseXPath>
+    <JsComponentGuid>{0bec6715-857a-4108-b2c8-5d2233d82ae9}</JsComponentGuid>
+    <JsBaseXPath><![CDATA[//wix:Component[@Guid='$(JsComponentGuid)']]]></JsBaseXPath>
+    <CssComponentGuid>{b789ccfd-44ef-4c7c-a5ad-6f11f440f671}</CssComponentGuid>
+    <CssBaseXPath><![CDATA[//wix:Component[@Guid='$(CssComponentGuid)']]]></CssBaseXPath>
+    <HighlighterImagesComponentGuid>{81ca7287-8967-45fa-83d0-81bf1e487c34}</HighlighterImagesComponentGuid>
+    <HighlighterImagesBaseXPath><![CDATA[//wix:Component[@Guid='$(HighlighterImagesComponentGuid)']]]></HighlighterImagesBaseXPath>
+    <ActiproComponentGuid>{0b951e7d-16d9-45b6-a1cb-2b1b2354e1f6}</ActiproComponentGuid>
+    <ActiproBaseXPath><![CDATA[//wix:Component[@Guid='$(ActiproComponentGuid)']]]></ActiproBaseXPath>
+    <TransformsComponentGuid>{0a3ef934-f7f9-4572-907b-a80ba03e23da}</TransformsComponentGuid>
+    <TransformsBaseXPath><![CDATA[//wix:Component[@Guid='$(TransformsComponentGuid)']]]></TransformsBaseXPath>
+  </PropertyGroup>
+  
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildCommunityTasks\MSBuild.Community.Tasks.Targets"  Condition="'$(MSBuildCommunityTasksPath)' == ''" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WiX\v3.0\Wix.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MSBuildExtendedTasks\MSBuild.Extended.Tasks.Targets"/>
+  
+  <ItemGroup>
+    <SourceFiles Include="*.wxs"/>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ChmFiles Include="$(OutputPath)**\*.chm" />
+    <IconFiles Include="$(OutputPath)**\icons\*.gif" />
+    <RootWixFiles Include="$(OutputPath)*.*" Exclude="$(OutputPath)*.xsd;$(OutputPath)*.zip;$(OutputPath)**\*.chm" Condition="'$(Configuration)' == 'Debug'" />
+    <RootWixFiles Include="$(OutputPath)*.*" Exclude="$(OutputPath)*.xsd;$(OutputPath)*.zip;$(OutputPath)*.xsd;$(OutputPath)**\*.chm" Condition="'$(Configuration)' != 'Debug'" />
+    <ScriptFiles Include="$(OutputPath)**\scripts\*.js" />
+    <CssFiles Include="$(OutputPath)**\styles\*.css" />
+    <HighlighterImageFiles Include="$(OutputPath)**\OutliningIndicators\*.gif" />
+    <ActiproFiles Include="$(OutputPath)**\Languages\Actipro*.xml" />
+    <TransformsFiles Include="$(OutputPath)**\Transforms\*.*" />
+  </ItemGroup>
+  <Target Name="PrepareBuild" DependsOnTargets="AddSourceFiles;AddContentFiles" Condition=" '$(CCNetLabel)' != '' ">
+    <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
+  </Target>
+
+  <Target Name="GenerateFiles" Condition="'$(CCNetLabel)' != ''">
+    <Attrib Files="$(WixFile)" ReadOnly="False" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(BaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(RootWixFiles)" XPath="$(BaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(ChmBaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(ChmFiles)" XPath="$(ChmBaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(IconsBaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(IconFiles)" XPath="$(IconsBaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(JsBaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(ScriptFiles)" XPath="$(JsBaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(CssBaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(CssFiles)" XPath="$(CssBaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(HighlighterImagesBaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(HighlighterImageFiles)" XPath="$(HighlighterImagesBaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(ActiproBaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(ActiproFiles)" XPath="$(ActiproBaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+    <RemoveXmlNode XmlFile="$(WixFile)" ParentNodeXPath="$(TransformsBaseXPath)" RemoveNodeXPath="wix:File" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" />
+    <WixAddFilesToComponent Files="@(TransformsFiles)" XPath="$(TransformsBaseXPath)" NamespaceURI="$(Namespace)" Namespaces="$(NamespaceManager)" XmlFile="$(WixFile)" />
+
+  </Target>
+
+  <Target Name="AddSourceFiles" DependsOnTargets="GenerateFiles">
+    <CreateItem Include="@(SourceFiles)" ContinueOnError="false">
+      <Output TaskParameter="Include" ItemName="Compile" />
+    </CreateItem>
+  </Target>
+
+  <Target Name="AddContentFiles">
+    <CreateItem Include="$(OutputPath)**\*.*" ContinueOnError="false" Exclude="$(ExcludePdb)">
+      <Output TaskParameter="Include" ItemName="Content" />
+    </CreateItem>
+  </Target>
+
+  <ItemGroup>
+    <WixExtension Include="$(WixToolPath)WixUIExtension.dll" />
+    <WixExtension Include="$(WixToolPath)WixNetFxExtension.dll" />
+    <WixExtension Include="$(WixToolPath)WixUtilExtension.dll" />
+  </ItemGroup>
+</Project>

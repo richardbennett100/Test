@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ProjectStats Name="MSBuildExtendedTasks" Path="D:\dotNetProjects\MSBuildExtendedTasks">
+  <Totals>
+    <SingleLineCommentsCount>809</SingleLineCommentsCount>
+    <MultiLineCommentsCount>3</MultiLineCommentsCount>
+    <TotalCommentsCount>812</TotalCommentsCount>
+    <TotalLinesCount>2619</TotalLinesCount>
+    <SourceCodeLineCount>1595</SourceCodeLineCount>
+    <EmptyLinesCount>212</EmptyLinesCount>
+    <SourceCodeFilesCount>17</SourceCodeFilesCount>
+  </Totals>
+  <Files>
+    <File Name="\CodeHighligherSandcastleComponent\CodeBlockComponent.cs">
+      <SingleLineCommentsCount>27</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>27</TotalCommentsCount>
+      <TotalLinesCount>147</TotalLinesCount>
+      <SourceCodeLineCount>105</SourceCodeLineCount>
+      <EmptyLinesCount>15</EmptyLinesCount>
+    </File>
+    <File Name="\CodeHighligherSandcastleComponent\CodeBlockPostTransformComponent.cs">
+      <SingleLineCommentsCount>19</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>19</TotalCommentsCount>
+      <TotalLinesCount>122</TotalLinesCount>
+      <SourceCodeLineCount>93</SourceCodeLineCount>
+      <EmptyLinesCount>10</EmptyLinesCount>
+    </File>
+    <File Name="\CodeHighligherSandcastleComponent\Parsers\CSharpDynamicSyntaxLanguage.cs">
+      <SingleLineCommentsCount>35</SingleLineCommentsCount>
+      <MultiLineCommentsCount>1</MultiLineCommentsCount>
+      <TotalCommentsCount>36</TotalCommentsCount>
+      <TotalLinesCount>119</TotalLinesCount>
+      <SourceCodeLineCount>76</SourceCodeLineCount>
+      <EmptyLinesCount>7</EmptyLinesCount>
+    </File>
+    <File Name="\CodeHighligherSandcastleComponent\Properties\Resources.Designer.cs">
+      <SingleLineCommentsCount>25</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>25</TotalCommentsCount>
+      <TotalLinesCount>79</TotalLinesCount>
+      <SourceCodeLineCount>46</SourceCodeLineCount>
+      <EmptyLinesCount>8</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Net\MakeHttpRequest.cs">
+      <SingleLineCommentsCount>155</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>155</TotalCommentsCount>
+      <TotalLinesCount>370</TotalLinesCount>
+      <SourceCodeLineCount>180</SourceCodeLineCount>
+      <EmptyLinesCount>35</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Sandcastle\GenerateDocumentation.cs">
+      <SingleLineCommentsCount>124</SingleLineCommentsCount>
+      <MultiLineCommentsCount>1</MultiLineCommentsCount>
+      <TotalCommentsCount>125</TotalCommentsCount>
+      <TotalLinesCount>360</TotalLinesCount>
+      <SourceCodeLineCount>191</SourceCodeLineCount>
+      <EmptyLinesCount>44</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Sandcastle\SandcastleHelper.cs">
+      <SingleLineCommentsCount>156</SingleLineCommentsCount>
+      <MultiLineCommentsCount>1</MultiLineCommentsCount>
+      <TotalCommentsCount>157</TotalCommentsCount>
+      <TotalLinesCount>443</TotalLinesCount>
+      <SourceCodeLineCount>250</SourceCodeLineCount>
+      <EmptyLinesCount>36</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\String\StringFormat.cs">
+      <SingleLineCommentsCount>22</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>22</TotalCommentsCount>
+      <TotalLinesCount>72</TotalLinesCount>
+      <SourceCodeLineCount>47</SourceCodeLineCount>
+      <EmptyLinesCount>3</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\String\StringReplace.cs">
+      <SingleLineCommentsCount>59</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>59</TotalCommentsCount>
+      <TotalLinesCount>181</TotalLinesCount>
+      <SourceCodeLineCount>105</SourceCodeLineCount>
+      <EmptyLinesCount>17</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\AbstractXmlTask.cs">
+      <SingleLineCommentsCount>44</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>44</TotalCommentsCount>
+      <TotalLinesCount>97</TotalLinesCount>
+      <SourceCodeLineCount>45</SourceCodeLineCount>
+      <EmptyLinesCount>8</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\AddXmlElement.cs">
+      <SingleLineCommentsCount>12</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>12</TotalCommentsCount>
+      <TotalLinesCount>85</TotalLinesCount>
+      <SourceCodeLineCount>68</SourceCodeLineCount>
+      <EmptyLinesCount>5</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\CreateXmlDocument.cs">
+      <SingleLineCommentsCount>25</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>25</TotalCommentsCount>
+      <TotalLinesCount>85</TotalLinesCount>
+      <SourceCodeLineCount>53</SourceCodeLineCount>
+      <EmptyLinesCount>7</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\GetXmlElementAttributeValue.cs">
+      <SingleLineCommentsCount>17</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>17</TotalCommentsCount>
+      <TotalLinesCount>78</TotalLinesCount>
+      <SourceCodeLineCount>58</SourceCodeLineCount>
+      <EmptyLinesCount>3</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\RemoveXmlNode.cs">
+      <SingleLineCommentsCount>26</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>26</TotalCommentsCount>
+      <TotalLinesCount>106</TotalLinesCount>
+      <SourceCodeLineCount>76</SourceCodeLineCount>
+      <EmptyLinesCount>4</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\SetXmlElementAttribute.cs">
+      <SingleLineCommentsCount>17</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>17</TotalCommentsCount>
+      <TotalLinesCount>95</TotalLinesCount>
+      <SourceCodeLineCount>74</SourceCodeLineCount>
+      <EmptyLinesCount>4</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\SetXmlElementInnerText.cs">
+      <SingleLineCommentsCount>25</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>25</TotalCommentsCount>
+      <TotalLinesCount>96</TotalLinesCount>
+      <SourceCodeLineCount>67</SourceCodeLineCount>
+      <EmptyLinesCount>4</EmptyLinesCount>
+    </File>
+    <File Name="\MSBuildExtendedTasks\Xml\XmlNodeExists.cs">
+      <SingleLineCommentsCount>21</SingleLineCommentsCount>
+      <MultiLineCommentsCount>0</MultiLineCommentsCount>
+      <TotalCommentsCount>21</TotalCommentsCount>
+      <TotalLinesCount>84</TotalLinesCount>
+      <SourceCodeLineCount>61</SourceCodeLineCount>
+      <EmptyLinesCount>2</EmptyLinesCount>
+    </File>
+  </Files>
+</ProjectStats>

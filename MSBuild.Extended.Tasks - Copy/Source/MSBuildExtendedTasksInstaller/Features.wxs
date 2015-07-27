@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <Feature Id="F_TASKS" Absent="disallow" AllowAdvertise="no" Description="Install the collection of MSBuild Extended Tasks." Display="expand" Level="1" Title="MSBuild Extended Tasks">
+      <ComponentRef Id="C_TASKS" />
+      <ComponentRef Id="C_ICONS"/>
+      <ComponentRef Id="C_JAVASCRIPT"/>
+      <ComponentRef Id="C_CSS"/>
+      <ComponentRef Id="C_CHIMAGES"/>
+      <ComponentRef Id="C_ACTIPRO"/>
+      <ComponentRef Id="C_TRANSFORMS"/>
+      <Feature Id="F_HELP" AllowAdvertise="no" Description="Install the help file for the Extended Tasks." Display="expand" Level="1" Title="Task Help File">
+        <ComponentRef Id="C_HELP" />
+      </Feature>
+      <Feature Id="F_SOURCECODE" AllowAdvertise="no" Description="Source code for MSBuild Extended Tasks" Display="expand" Level="1" Title="Source Code">
+        <ComponentRef Id="C_SOURCE"/>
+      </Feature>
+      <Feature Id="F_VS2005" AllowAdvertise="no" Description="Intergate MSBuild Extended Tasks with Visual Studio." Display="expand" Level="1" Title="Visual Studio Intergration">
+        <ComponentRef Id="C_SCHEMA" />
+        <ComponentRef Id="C_VS2005" />
+        <Condition Level="0">NOT DEVENV_2005_COMP</Condition>
+      </Feature>
+    </Feature>
+  </Fragment>
+</Wix>

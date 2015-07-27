@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Product Id="c18d316b-207f-4ee7-85c2-1378ae0378a7" Name="$(var.CCNetProject)"
+           Language="1033" Version="$(var.CCNetLabel)"
+           Manufacturer="Ryan Conrad"
+           UpgradeCode="397dbf02-2694-4c07-a446-2e8d20cd5598">
+    <Package InstallerVersion="200" Compressed="yes" Comments="$(var.CCNetProject)"
+             Manufacturer="Ryan Conrad" Description="$(var.CCNetProject)" />
+
+    <Property Id="ALLUSERS" Value="1" />
+    <PropertyRef Id="NETFRAMEWORK20"/>
+    <PropertyRef Id="NETFRAMEWORK30"/>
+
+    <Property Id="VS2005_MSBUILD_SCHEMA">
+      <RegistrySearch Id="SearchForCommonPath2" Type="raw" Root="HKLM"
+          Key="SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS" Name="ProductDir" >
+        <DirectorySearch Id="SearchForXmlPath2" Path="Xml" Depth="1">
+          <DirectorySearch Id="SearchForXmlSchemasPath2" Path="Schemas" Depth="1">
+            <DirectorySearch Id="SearchForXmlSchemasLangPath2" Path="1033" Depth="1">
+              <FileSearch Id ="SearchForMSBuildSchema" LongName="Microsoft.Build.xsd"/>
+            </DirectorySearch>
+          </DirectorySearch>
+        </DirectorySearch>
+      </RegistrySearch>
+    </Property>
+
+    <Property Id="DEVENV_2005_COMP">
+      <ComponentSearch Id="SearchForDevEnv2005Component" Type="file"
+                       Guid="320DB690-7979-4015-BD78-A16D7279043B" />
+    </Property>
+
+    <Property Id="VS2005_SCHEMAS_MSBUILD_DIR">
+      <RegistrySearch Id="SearchForCommonPath" Type="raw" Root="HKLM"
+                Key="SOFTWARE\Microsoft\VisualStudio\8.0\Setup\VS" Name="ProductDir" >
+        <DirectorySearch Id="SearchForXmlPath" Path="Xml" Depth="1">
+          <DirectorySearch Id="SearchForXmlSchemasPath" Path="Schemas" Depth="1">
+            <DirectorySearch Id="SearchForXmlSchemasLangPath" Path="1033" Depth="1">
+              <DirectorySearch Id="SearchForXmlSchemasMSBuildPath" Path="MSBuild" Depth="1" />
+            </DirectorySearch>
+          </DirectorySearch>
+        </DirectorySearch>
+      </RegistrySearch>
+    </Property>
+    
+    <Condition Message="The .NET Framework 2.0 must be installed">
+      Installed OR NETFRAMEWORK20 OR NETFRAMEWORK30
+    </Condition>
+    <Media Id="1" Cabinet="contents.cab" EmbedCab="yes" />
+    <FeatureRef Id="F_TASKS" />
+    <UIRef Id="WixUI_FeatureTree" />
+  </Product>
+</Wix>

@@ -1,0 +1,60 @@
+.codeEx {
+  position:relative;
+  width:100%;
+	overflow-x:scroll;
+	overflow-y:scroll;
+	color:#000;
+  padding-left:10px;
+  padding-top:5px;
+	font-family:Consolas, Verdania, Sans-Serif;
+	border-top:dashed 1px #9c9c9c;
+}
+
+/* IE 6 ignores this, so it fixes what displays different in firefox */
+.codeContainer > .codeEx {
+  padding-left:0px;
+  height: auto;
+  padding-top:0px;
+}
+
+/* IE 6 ignores this, so it fixes what displays different in firefox */
+.codeEx > pre > div {
+	font-size:10pt;
+  margin:10px 10px 10px 0px;
+	font-family:Consolas, Verdania, Sans-Serif;
+	padding-left:10px;
+}
+
+.codeContainer {
+  width:100%;
+	font-family:Consolas, Verdania, Sans-Serif;
+  border: solid 1px #9c9c9c;
+  background-color:#eee;
+  margin:0px;
+}
+
+.codeTitle {
+	padding:4px 5px 4px 5px;
+  font-size:14pt;
+	font-family:Consolas, Verdania, Sans-Serif;
+}
+
+.copyIconLabel {
+  position:relative;
+  float: right;
+  cursor:pointer;
+}
+
+.codeContainer > .codeTitle > .copyIconLabel {
+  display:none;
+}
+
+.codeExHostSpan {
+  padding:10px 10px 10px 0px; 
+  display:block;
+}
+
+/* changes the note style a bit to put a little "space" around the content. */
+.alert {
+  padding:10px 10px 0px 10px;
+}
